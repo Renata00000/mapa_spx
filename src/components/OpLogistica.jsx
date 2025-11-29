@@ -143,7 +143,7 @@ const OpLogistica = () => {
   useEffect(() => {
     const fetchUnits = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/units');
+        const response = await fetch('https://locations-security.onrender.com/api/units');
         const result = await response.json();
         if (result.success) {
           setMockData(result.data);
