@@ -31,7 +31,7 @@ const AdminPanel = () => {
 
   const fetchUnits = async () => {
     try {
-      const response = await fetch('http://localhost:3001/api/units');
+      const response = await fetch('https://locations-security.onrender.com/api/units');
       const result = await response.json();
       if (result.success) {
         const flatUnits = [];
@@ -106,7 +106,7 @@ const AdminPanel = () => {
   const handleSave = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3001/api/units', {
+      const response = await fetch('https://locations-security.onrender.com/api/units', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
